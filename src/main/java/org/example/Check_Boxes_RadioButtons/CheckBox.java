@@ -107,7 +107,7 @@ public class CheckBox {
             // Step 12: Perform all soft assertions and print confirmation message
             softAssert.assertAll();
             System.out.println("All assertions passed successfully.");
-
+//
         } catch (Exception e) {
             // Handle exceptions and log the error
             System.err.println("Test failed due to exception: " + e.getMessage());
