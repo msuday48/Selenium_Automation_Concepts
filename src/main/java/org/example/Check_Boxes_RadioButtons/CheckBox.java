@@ -1,6 +1,8 @@
 package org.example.Check_Boxes_RadioButtons;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -99,14 +101,79 @@ public class CheckBox {
 
             // Step 11: Verify the classroom page is loaded
             WebElement classroomElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("(//div[@class='name text--24 font-weight--600 ml-3'])[1]")));
+                    By.xpath("(//div[@class='text--24 font-weight--600'])[1]")));
             String classroomName = classroomElement.getText();
-            softAssert.assertEquals(classroomName, "Testing Institute", "Classroom name mismatch!");
+            softAssert.assertEquals(classroomName, "Classroom for Automated testing", "Classroom name mismatch!");
             System.out.println("Verified classroom name: " + classroomName);
 
             // Step 12: Perform all soft assertions and print confirmation message
             softAssert.assertAll();
             System.out.println("All assertions passed successfully.");
+
+            // Step 13: Navigate to the Live Sessions tab
+            WebElement liveSessionsTab = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[normalize-space()='Live Sessions'])[1]")));
+            liveSessionsTab.click();
+            System.out.println("Clicked on 'Live Sessions' tab.");
+
+            // Step 14: Click on the Schedule Session button
+            WebElement scheduleSessionButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'mr-2 v-btn v-btn--has-bg theme--light v-size--default small secondary-bg')]")));
+            scheduleSessionButton.click();
+            System.out.println("Clicked on 'Schedule Session' button.");
+
+
+            WebElement addSessionButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[contains(@class, 'v-icon') and contains(@class, 'notranslate') and contains(@class, 'mdi') and contains(@class, 'mdi-plus') and contains(@class, 'theme--light')]")));
+            addSessionButton.click();
+            System.out.println("Clicked on 'addSession' button.");
+
+            /*
+            // Step 15: Wait for the time input field to be clickable
+
+            WebElement timeInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("")));
+
+            // Scroll the element into view
+            ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", timeInput);
+
+            // Debugging: Check if the element is displayed and enabled
+            System.out.println("Is element displayed? " + timeInput.isDisplayed());
+            System.out.println("Is element enabled? " + timeInput.isEnabled());
+
+            // Set the time using JavaScript (if sendKeys doesn't work)
+            ((JavascriptExecutor) driver).executeScript("arguments[0].value = '10:00';", timeInput);
+
+            // Locate the input box and press the Enter key to confirm the time
+            WebElement confirmInput = driver.findElement(By.xpath(" "));
+            confirmInput.sendKeys(Keys.ENTER);
+            System.out.println("Time entered and confirmed successfully.");
+*/
+
+            // Step 1: Click the time input box to open the dropdown
+            WebElement timeInputBox = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("(//div[@role='combobox'])[1]"))); // Replace with the actual locator
+            timeInputBox.click();
+            System.out.println("Clicked on the time input box.");
+
+// Step 2: Wait for the dropdown to appear
+// Use a more generic XPath to locate the dropdown
+            WebElement dropdown = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//div[contains(@class, 'v-menu__content') and contains(@class, 'v-autocomplete__content')]")));
+            System.out.println("Dropdown is visible.");
+
+// Step 3: Scroll to the desired time option (10:00)
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            WebElement timeOption = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//div[@role='option']//div[contains(@class, 'v-list-item__title') and text()='10:00']")));
+            js.executeScript("arguments[0].scrollIntoView(true);", timeOption);
+            System.out.println("Scrolled to the time option: 10:00");
+
+// Step 4: Click the time option (10:00)
+            timeOption.click();
+            System.out.println("Selected time: 10:00");
+
+// Step 5: Click the Create button
+            WebElement createButton = wait.until(ExpectedConditions.elementToBeClickable(
+                    By.xpath("//button[contains(@class, 'v-btn') and contains(text(), 'Create')]")));
+            createButton.click();
+            System.out.println("Clicked on 'Create' button.");
 //
         } catch (Exception e) {
             // Handle exceptions and log the error
@@ -114,7 +181,7 @@ public class CheckBox {
             e.printStackTrace();
         } finally {
             // Close the browser
-            driver.quit();
+
             System.out.println("Browser closed successfully.");
         }
     }
