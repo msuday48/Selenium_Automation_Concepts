@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
+import java.util.List;
 
 public class CheckBox {
 
@@ -125,30 +126,44 @@ public class CheckBox {
             addSessionButton.click();
             System.out.println("Clicked on 'addSession' button.");
 
-            /*
+// Wait for the element to be visible first
+            WebElement inputField = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[contains(@id, 'input-')])[1]")));
+
+// Ensure the element is clickable
+            wait.until(ExpectedConditions.elementToBeClickable(inputField));
+
+// Perform click and sendKeys
+            inputField.click();  // Perform the click action
+            inputField.clear();  // Clear the field if needed
+            inputField.sendKeys("10:00");
             // Step 15: Wait for the time input field to be clickable
 
-            WebElement timeInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("")));
+            List<WebElement> elements = driver.findElements(By.xpath("//input[contains(@id, 'input-')]"));
+            System.out.println("Elements found: " + elements.size());
+
+            System.out.println("Time entered and confirmed successfully.");
+            WebElement timeInput = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[contains(@id, 'input-')])[1]")));
 
             // Scroll the element into view
             ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", timeInput);
+timeInput.sendKeys("10:00");
 
+            System.out.println("Time entered and confirmed successfully.");
             // Debugging: Check if the element is displayed and enabled
             System.out.println("Is element displayed? " + timeInput.isDisplayed());
             System.out.println("Is element enabled? " + timeInput.isEnabled());
 
-            // Set the time using JavaScript (if sendKeys doesn't work)
-            ((JavascriptExecutor) driver).executeScript("arguments[0].value = '10:00';", timeInput);
+
 
             // Locate the input box and press the Enter key to confirm the time
-            WebElement confirmInput = driver.findElement(By.xpath(" "));
+            WebElement confirmInput = driver.findElement(By.xpath("(//input[contains(@id, 'input-')])[1] "));
             confirmInput.sendKeys(Keys.ENTER);
             System.out.println("Time entered and confirmed successfully.");
-*/
 
+/*
             // Step 1: Click the time input box to open the dropdown
-            WebElement timeInputBox = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//div[@role='combobox'])[1]"))); // Replace with the actual locator
+            WebElement timeInputBox = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                    By.xpath("//div[@class='v-select__slot']//input[contains(@aria-activedescendant, 'list-item-')]"))); // Replace with the actual locator
             timeInputBox.click();
             System.out.println("Clicked on the time input box.");
 
@@ -168,7 +183,7 @@ public class CheckBox {
 // Step 4: Click the time option (10:00)
             timeOption.click();
             System.out.println("Selected time: 10:00");
-
+*/
 // Step 5: Click the Create button
             WebElement createButton = wait.until(ExpectedConditions.elementToBeClickable(
                     By.xpath("//button[contains(@class, 'v-btn') and contains(text(), 'Create')]")));
