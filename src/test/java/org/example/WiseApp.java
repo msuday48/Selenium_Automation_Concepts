@@ -1,6 +1,4 @@
 package org.example;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -12,7 +10,7 @@ import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import java.time.Duration;
-public class AppTest{
+public class WiseApp {
 public static void main(String[] args) {
     // Initialize Chrome browser
     WebDriver driver = new ChromeDriver();
