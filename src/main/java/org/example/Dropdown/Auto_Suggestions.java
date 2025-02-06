@@ -36,6 +36,8 @@ public class Auto_Suggestions  {
          list.get(i).click();
          break;
      }
+
+
      }
     }
 
