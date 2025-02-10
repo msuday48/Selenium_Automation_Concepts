@@ -23,7 +23,6 @@ public class ConditionalMethods {
 		Boolean logo = driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']")).isDisplayed();
 		System.out.println("Logo displayed: " + logo);
 
-
 		// 2. isEnabled()
 		WebElement registerButton = driver.findElement(By.id("register-button"));
 		System.out.println("Register button enabled: " + registerButton.isEnabled());

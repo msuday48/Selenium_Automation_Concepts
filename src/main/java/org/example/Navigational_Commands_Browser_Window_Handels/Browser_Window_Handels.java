@@ -1,5 +1,4 @@
 package org.example.Navigational_Commands_Browser_Window_Handels;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -7,6 +6,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+
 
 public class Browser_Window_Handels
 {
@@ -45,5 +45,4 @@ public class Browser_Window_Handels
             }
         }
         driver.quit();
-    }
-}
+    }}

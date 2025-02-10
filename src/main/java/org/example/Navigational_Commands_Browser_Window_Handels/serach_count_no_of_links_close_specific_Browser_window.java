@@ -34,7 +34,6 @@ public static void main(String[]args){
         lik.click();
     }
 
-
     Set<String> windowid=driver.getWindowHandles();
 
     for(String window:windowid){

@@ -34,5 +34,4 @@ public class GetMethods {
 
 	   driver.quit();
 	}
-
 }
