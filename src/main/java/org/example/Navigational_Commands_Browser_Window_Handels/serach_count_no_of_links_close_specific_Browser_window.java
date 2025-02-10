@@ -28,7 +28,6 @@ public static void main(String[]args){
 
     System.out.println("printing & clicking links................");
 
-
     for(WebElement lik:searchlinks){
 
         System.out.println(lik.getText());
@@ -42,7 +41,6 @@ public static void main(String[]args){
         String title=driver.switchTo().window(window).getTitle();
         System.out.println(title);
     }
-
     driver.quit();
 }
 }

@@ -35,11 +35,7 @@ public class Auto_Suggestions  {
          System.out.println(list.get(i).getText());
          list.get(i).click();
          break;
-     }
-
-
-     }
-    }
+     }}}
 
     public static class HiddenDropdown {
         public static void main(String[] args) {
@@ -75,7 +71,6 @@ public class Auto_Suggestions  {
             for (WebElement option : options) {
                 System.out.println(option.getText());
             }
-
             // Close the browser
             driver.quit();
         }
