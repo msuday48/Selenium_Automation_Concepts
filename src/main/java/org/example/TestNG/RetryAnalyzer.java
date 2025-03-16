@@ -10,7 +10,7 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 
     // Maximum number of retries
     private static final int maxRetryCount = 2;
-
+//
     @Override
     public boolean retry(ITestResult result) {
         if (retryCount < maxRetryCount) {
