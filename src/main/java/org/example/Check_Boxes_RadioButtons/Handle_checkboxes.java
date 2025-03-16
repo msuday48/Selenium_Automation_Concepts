@@ -1,18 +1,14 @@
 package org.example.Check_Boxes_RadioButtons;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.time.Duration;
 import java.util.List;
-
 public class Handle_checkboxes {
 
     public static void main(String[] args) throws InterruptedException {
 
-      
         WebDriver driver=new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -26,6 +22,8 @@ public class Handle_checkboxes {
         //total number of checkboxes
         List<WebElement> checkboxes=driver.findElements(By.xpath("//input[@class='form-check-input' and @type='checkbox']"));
         System.out.println("Total number of checkboxes:"+checkboxes.size()); //7
+
+
 
         //Select all the checkboxes
 		/*for(int i=0;i<checkboxes.size();i++)
@@ -86,11 +84,5 @@ public class Handle_checkboxes {
                 chkbox.click();
             }
         }
-
     }
-
 }
-
-
-
-

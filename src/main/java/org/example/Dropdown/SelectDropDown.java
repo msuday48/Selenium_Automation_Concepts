@@ -25,14 +25,14 @@ WebDriver driver=new ChromeDriver();
         WebElement countrydropdown=driver.findElement((By.xpath("//select[@id=\"country\"]")));
 
         Select dropdown = new Select(countrydropdown);
-/*
+
         dropdown.selectByVisibleText("Germany");
         dropdown.selectByValue("japan");
         dropdown.deselectByIndex(2);
-*/
+
         List <WebElement>  options= dropdown.getOptions();
 
-     /*   for(int i=0;i<options.size();i++)
+     /*   for(int i=0;i<options.size();i++8)
         {
             System.out.println(options.get(i).getText());
         }

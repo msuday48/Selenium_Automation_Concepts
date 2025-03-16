@@ -1,5 +1,4 @@
 package org.example.javascriptExecutor;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -21,7 +20,6 @@ public class JavascriptExecutorDemo {
 		// passing the text into inputbox - alternate of sendKeys()
 		JavascriptExecutor js=(JavascriptExecutor)driver;  	//JavascriptExecutor js=driver;
 		js.executeScript("arguments[0].setAttribute('value','John')",inputbox); 
-
 
 		// clicking on element - alternate of click()
 		WebElement radiobtn=driver.findElement(By.xpath("//input[@id='male']"));

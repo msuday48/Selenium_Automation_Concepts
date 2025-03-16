@@ -22,7 +22,6 @@ public class ScrollingPage {
 		//js.executeScript("window.scrollBy(0,1500)", "");
 		//System.out.println(js.executeScript("return window.pageYOffset;")); //1500
 
-		
 		//2) scroll the page till element is visible
 		
 		/*WebElement ele=driver.findElement(By.xpath("//strong[normalize

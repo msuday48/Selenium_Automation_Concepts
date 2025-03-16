@@ -27,15 +27,12 @@ public static void main(String[]args){
     System.out.println("Number of Links:"+ searchlinks.size());
 
     System.out.println("printing & clicking links................");
-
     for(WebElement lik:searchlinks){
-
         System.out.println(lik.getText());
         lik.click();
     }
 
     Set<String> windowid=driver.getWindowHandles();
-
     for(String window:windowid){
         String title=driver.switchTo().window(window).getTitle();
         System.out.println(title);

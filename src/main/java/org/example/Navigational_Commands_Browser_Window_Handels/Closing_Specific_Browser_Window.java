@@ -3,12 +3,9 @@ package org.example.Navigational_Commands_Browser_Window_Handels;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Set;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-
 
 public class Closing_Specific_Browser_Window {
 
@@ -35,8 +32,6 @@ public class Closing_Specific_Browser_Window {
             if(title.equals("Human Resources Management Software | OrangeHRM") || title.equals("some other title"))
             {
                 driver.close();
-
             }
-
         }
 }}
