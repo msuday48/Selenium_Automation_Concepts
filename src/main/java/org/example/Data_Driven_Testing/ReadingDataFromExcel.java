@@ -1,16 +1,12 @@
 package org.example.Data_Driven_Testing;
-
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 
-
 //Excel File--->Workbook--->Sheets--->Rows----Cells
-
 
 public class ReadingDataFromExcel {
 
@@ -32,7 +28,6 @@ public class ReadingDataFromExcel {
         for(int r=0;r<=totalRows;r++)
         {
             XSSFRow currentRow=sheet.getRow(r);
-
             for(int c=0;c<totalCells;c++)
             {
                 XSSFCell cell=currentRow.getCell(c);

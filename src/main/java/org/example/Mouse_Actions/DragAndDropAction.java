@@ -14,11 +14,9 @@ public class DragAndDropAction {
 		
 		driver.get("http://www.dhtmlgoodies.com/scripts/drag-drop-custom/demo-drag-drop-3.html");
 		driver.manage().window().maximize();
-		
 
 		Actions act=new Actions(driver);
-		
-		
+
 		//drag and drop1
 		WebElement rome=driver.findElement(By.xpath("//div[@id='box6']"));
 		WebElement italy=driver.findElement(By.xpath("//div[@id='box106']"));

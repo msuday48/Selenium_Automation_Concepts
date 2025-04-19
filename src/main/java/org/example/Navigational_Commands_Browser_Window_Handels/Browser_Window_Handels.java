@@ -38,7 +38,6 @@ public class Browser_Window_Handels
         System.out.println(driver.getTitle());
 */
         for(String wind:windowid){
-
             String title =driver.switchTo().window(wind).getTitle();
             if(title.equals("OrangeHRM")){
                 System.out.println(driver.getCurrentUrl());

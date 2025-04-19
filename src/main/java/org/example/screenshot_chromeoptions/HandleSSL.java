@@ -10,9 +10,7 @@ public class HandleSSL {
 		
 		ChromeOptions options=new ChromeOptions();
 		options.setAcceptInsecureCerts(true); // accepts SSL certificates
-		
-		
-		
+
 		WebDriver driver=new ChromeDriver(options);
 		
 		driver.get("https://expired.badssl.com/");

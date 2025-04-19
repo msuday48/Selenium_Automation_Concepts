@@ -21,8 +21,7 @@ public class OpentheLinkInNewTab {
 		driver.manage().window().maximize();
 		
 		WebElement regLink=driver.findElement(By.xpath("//a[normalize-space()='Register']"));
-		
-				
+
 		Actions act=new Actions(driver);
 		
 		//Control+Reglink
@@ -38,8 +37,5 @@ public class OpentheLinkInNewTab {
 		//Home page
 		driver.switchTo().window(ids.get(0)); // switch to home page
 		driver.findElement(By.xpath("//input[@id='small-searchterms']")).sendKeys("TShirts");
-		
-		
 	}
-
 }

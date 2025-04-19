@@ -23,8 +23,6 @@ public class Handle_checkboxes {
         List<WebElement> checkboxes=driver.findElements(By.xpath("//input[@class='form-check-input' and @type='checkbox']"));
         System.out.println("Total number of checkboxes:"+checkboxes.size()); //7
 
-
-
         //Select all the checkboxes
 		/*for(int i=0;i<checkboxes.size();i++)
 		{

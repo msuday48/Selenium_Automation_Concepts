@@ -1,5 +1,4 @@
 package org.example.Check_Boxes_RadioButtons;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -8,12 +7,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 import org.testng.Assert;
-
 import java.time.Duration;
 
 public class CheckBox {
-
     public static void main(String[] args) {
+
         // Initialize Chrome browser
         WebDriver driver = new ChromeDriver();
         // Maximize browser window to full screen
@@ -21,7 +19,6 @@ public class CheckBox {
 
         // Initialize WebDriverWait with a timeout of 10 seconds
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
         try {
             // Visit the website
             driver.get("https://staging-web.wise.live");

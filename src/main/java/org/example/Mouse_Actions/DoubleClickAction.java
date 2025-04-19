@@ -30,8 +30,7 @@ public class DoubleClickAction {
 		
 		act.doubleClick(button).perform();
 
-			
-		
+
 		//validation : box2 should contains "WELCOME"
 		
 		String text=box2.getAttribute("value");
@@ -46,8 +45,5 @@ public class DoubleClickAction {
 		{
 			System.out.println("Text Not copied properly..");
 		}
-		
-		
 	}
-
 }

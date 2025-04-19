@@ -32,7 +32,7 @@ WebDriver driver=new ChromeDriver();
 
         List <WebElement>  options= dropdown.getOptions();
 
-     /*   for(int i=0;i<options.size();i++8)
+     /*   for(int i=0;i<options.size();i++)
         {
             System.out.println(options.get(i).getText());
         }

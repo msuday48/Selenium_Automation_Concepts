@@ -1,5 +1,4 @@
 package org.example.TestNG;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -54,9 +53,10 @@ public class DataProviderTest {
                 {"testuser", "Test@123"},
         };
     }
-
+    //
     @AfterClass
     void teardown() {
+
         driver.quit();
     }
 }

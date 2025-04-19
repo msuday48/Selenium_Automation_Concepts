@@ -1,21 +1,17 @@
 package org.example.wait_Statements;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
-
 import java.time.Duration;
 import java.util.NoSuchElementException;
 
 public class Fluent_wait {
-
     public static void main(String[] args) {
 
         // Initialize WebDriver
         WebDriver driver = new ChromeDriver();
-
         // Initialize FluentWait
         FluentWait<WebDriver> mywait = new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(10))   // Total wait time
