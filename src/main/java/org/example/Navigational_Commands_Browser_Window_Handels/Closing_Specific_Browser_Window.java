@@ -26,7 +26,6 @@ public class Closing_Specific_Browser_Window {
             String title=driver.switchTo().window(winid).getTitle();
             //String url=driver.switchTo().window(winid).getCurrentUrl();
 
-
             System.out.println(title);
 
             if(title.equals("Human Resources Management Software | OrangeHRM") || title.equals("some other title"))

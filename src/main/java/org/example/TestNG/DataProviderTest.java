@@ -45,7 +45,6 @@ public class DataProviderTest {
             Assert.fail("Login failed for: " + username);
         }
     }
-
     @DataProvider(name = "dp")
     public Object[][] loginData() {
         return new Object[][]{
