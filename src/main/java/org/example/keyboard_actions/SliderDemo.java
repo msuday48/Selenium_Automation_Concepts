@@ -30,7 +30,6 @@ public class SliderDemo {
 		act.dragAndDropBy(max_slider, -100, 249).perform();
 		System.out.println("Location of the max slider after moving:"+max_slider.getLocation()); //(778, 249)
 
-		
 	}
 
 }

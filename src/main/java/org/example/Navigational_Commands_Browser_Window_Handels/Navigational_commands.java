@@ -20,7 +20,6 @@ public class Navigational_commands {
         driver.navigate().to("https://demo.nopcommerce.com/");
         driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
-
         driver.navigate().back();
         System.out.println(driver.getCurrentUrl()); //https://demo.nopcommerce.com/
 

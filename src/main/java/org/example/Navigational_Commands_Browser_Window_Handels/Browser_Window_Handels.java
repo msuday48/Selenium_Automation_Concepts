@@ -24,7 +24,7 @@ public class Browser_Window_Handels
 
         //Aproach1
 
-        List <String> windowlist=new ArrayList (windowid);
+        List <String> windowlist=new ArrayList<> (windowid);
       /*
         String childwindow=windowlist.get(0);
         String parentwindow=windowlist.get(1);

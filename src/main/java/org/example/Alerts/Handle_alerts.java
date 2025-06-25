@@ -30,5 +30,4 @@ public class Handle_alerts {
 		alertwindow.dismiss();  // close alert window by using cancel button
 
 }
-
 }

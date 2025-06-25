@@ -21,6 +21,7 @@ public class JavascriptExecutorDemo {
 		JavascriptExecutor js=(JavascriptExecutor)driver;  	//JavascriptExecutor js=driver;
 		js.executeScript("arguments[0].setAttribute('value','John')",inputbox); 
 
+
 		// clicking on element - alternate of click()
 		WebElement radiobtn=driver.findElement(By.xpath("//input[@id='male']"));
 		js.executeScript("arguments[0].click()",radiobtn);

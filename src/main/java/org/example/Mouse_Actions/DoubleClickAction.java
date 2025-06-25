@@ -27,9 +27,8 @@ public class DoubleClickAction {
 		
 		//Double click action on the button
 		Actions act=new Actions(driver);
-		
-		act.doubleClick(button).perform();
 
+		act.doubleClick(button).perform();
 
 		//validation : box2 should contains "WELCOME"
 		

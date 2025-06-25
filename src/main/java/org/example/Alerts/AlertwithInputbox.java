@@ -12,14 +12,15 @@ public class AlertwithInputbox {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         driver.manage().window().maximize();
 
-        driver.findElement(By.xpath("")).click();
+        driver.findElement(By.xpath("(//button[normalize-space()='Click for JS Prompt'])[1]")).click();
 
         Alert alert=driver.switchTo().alert();
+
         System.out.println(alert.getText());
         alert.sendKeys("Hello");
         alert.accept();
 
-        String text=driver.findElement(By.xpath("//p[@id='result']")).getText();
+        String text=driver.findElement(By.xpath("//p [contains(@id,'result')]")).getText();
 
         if(text.equals("Hello")){
             System.out.println("test passed");
@@ -27,4 +28,5 @@ public class AlertwithInputbox {
 else {
     System.out.println("test failed");
 }
+driver.quit();
     }}

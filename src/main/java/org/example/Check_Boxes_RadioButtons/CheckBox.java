@@ -8,96 +8,53 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.asserts.SoftAssert;
 import org.testng.Assert;
 import java.time.Duration;
+import java.util.List;
 
 public class CheckBox {
     public static void main(String[] args) {
 
-        // Initialize Chrome browser
-        WebDriver driver = new ChromeDriver();
-        // Maximize browser window to full screen
+        WebDriver driver=new ChromeDriver();
+
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+        driver.get("https://itera-qa.azurewebsites.net/home/automation");
         driver.manage().window().maximize();
 
-        // Initialize WebDriverWait with a timeout of 10 seconds
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
-            // Visit the website
-            driver.get("https://staging-web.wise.live");
+        List<WebElement> checkboxes=driver.findElements(By.xpath(" "));
 
-            // Click on login using phone number
-            WebElement phoneLoginButton = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//span[normalize-space()='Continue with Mobile'])[1]")));
-            phoneLoginButton.click();
+        System.out.println(checkboxes.size());
 
-            // Enter the phone number
-            WebElement phoneNumberField = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("//input[@placeholder='Phone number']")));
-            phoneNumberField.sendKeys("1111100000");
+        for(int i=0;i<checkboxes.size();i++){
 
-            // Click on the "Get OTP" button
-            WebElement clickOnGetOtp = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//span[normalize-space()='Get OTP']")));
-            clickOnGetOtp.click();
-
-            // Wait for OTP input fields to be visible and enter OTP
-            WebElement otpField1 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("(//input[@class='otp-field-box--0'])[1]")));
-            otpField1.sendKeys("0");
-
-            WebElement otpField2 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("(//input[@class='otp-field-box--1'])[1]")));
-            otpField2.sendKeys("0");
-
-            WebElement otpField3 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("(//input[@class='otp-field-box--2'])[1]")));
-            otpField3.sendKeys("0");
-
-            WebElement otpField4 = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("(//input[@class='otp-field-box--3'])[1]")));
-            otpField4.sendKeys("0");
-
-            // Click on the "Verify" button
-            WebElement submitOtpButton = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//span[normalize-space()='Verify'])[1]")));
-            submitOtpButton.click();
-
-            // Wait for the institute name to appear
-            WebElement instituteNameElement = wait.until(ExpectedConditions.visibilityOfElementLocated(
-                    By.xpath("(//div[@class='name text--24 font-weight--600 ml-3'])[1]")));
-            String actualInstituteName = instituteNameElement.getText();
-
-            // Initialize SoftAssert for soft assertions
-            SoftAssert softAssert = new SoftAssert();
-            // Assert that the institute name is "Testing Institute"
-            softAssert.assertEquals(actualInstituteName, "Testing Institute", "Institute name mismatch!");
-
-            // Verify the institute name is displayed
-            WebElement instituteName = driver.findElement(By.xpath("//*[text()='Testing Institute']"));
-            Assert.assertTrue(instituteName.isDisplayed(), "Institute name not found!");
-
-            // Click on the "Group Courses" button
-            WebElement groupCourses = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//div[@class='card-content d-flex py-sm-5 py-3 px-4 border-radius--8 card-hover-effect'])[2]")));
-            groupCourses.click();
-
-            // Wait for the custom popup to appear and locate the "X" button
-            WebElement closeButton = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("//button[@class='v-icon notranslate v-icon--link mdi mdi-close theme--light']")));
-            closeButton.click();
-
-            System.out.println("Custom popup closed successfully!");
-
-            // Click on the "Classroom for Automated Testing" link
-            WebElement classroomAutomationTesting = wait.until(ExpectedConditions.elementToBeClickable(
-                    By.xpath("(//a[normalize-space()='Classroom for Automated testing'])[1]")));
-            classroomAutomationTesting.click();
-
-        } catch (Exception e) {
-            // Handle exceptions
-            e.printStackTrace();
-            System.err.println("Test failed due to exception: " + e.getMessage());
-        } finally {
-            // Close the browser
-            driver.quit();
+            checkboxes.get(i).click();
         }
-    }
-}
+
+        for(WebElement ck:checkboxes){
+            ck.click();
+        }
+
+        // //Select last 2 checkboxes
+        //        // total Number of checkboxes-how many checkboxes to be selected= startign index
+        //        //7-3= 4 ( startign index)
+
+        for(int i=4;i<checkboxes.size();i++){
+
+            checkboxes.get(i).click();
+        }
+
+        //clear/Uncheck checkboxes
+
+        //Using normal for loop
+        /*for(int i=0;i<3;i++)
+        {
+            checkboxes.get(i).click();
+        }*/
+
+		/*for(int i=0;i<checkboxes.size();i++)
+		{
+			if(checkboxes.get(i).isSelected())
+			{
+			checkboxes.get(i).click();
+			}
+    */
+}}

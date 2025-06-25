@@ -23,7 +23,7 @@ public class Fluent_wait {
         driver.manage().window().maximize();
 
         // Wait for the username field using Fluent Wait
-        WebElement txtusername = mywait.until(driver1 -> driver1.findElement(By.xpath("//input[@placeholder='Username']")));
+        WebElement txtusername = mywait.until(driver1-> driver1.findElement(By.xpath("//input[@placeholder='Username']")));
 
         // Enter the username
         txtusername.sendKeys("Admin");
