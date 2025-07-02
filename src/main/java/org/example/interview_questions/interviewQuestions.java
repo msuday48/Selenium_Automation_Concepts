@@ -191,10 +191,10 @@ public class interviewQuestions {
                 @BeforeClass
                 @BeforeMethod
                 @Test
-                @AfterSuite
+                @AfterMethod
                 @AfterClass
                 @AfterTest
-                @AfterMethod
+                @afterSuite
 
                        @Test(groups = {"regression", "Sanity"})
                        @Test(priority = 1)
