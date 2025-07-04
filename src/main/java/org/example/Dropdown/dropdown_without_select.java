@@ -46,9 +46,7 @@ public class dropdown_without_select {
        // for(WebElement op:options){
        //     System.out.println(op.getText());
        // }
-
     }
-
 }
 
 

@@ -1,4 +1,4 @@
-package org.example.TestNG;
+package org.example.Broken_links;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -23,6 +23,7 @@ public static void main (String[]args){
 		System.out.println("Total number of links:"+ links.size());
 
     int noOfBrokenLinks=0;
+
 
 		for(WebElement linkElement:links)
     {

@@ -19,7 +19,6 @@ public class BoostrapDropDown {
 
         driver.findElement(By.xpath("//button[contains(@class,'multiselect')]")).click(); // opens dropdown options
 
-
         //1) Select single option
         //driver.findElement(By.xpath("//input[@value='Java']")).click();
 
