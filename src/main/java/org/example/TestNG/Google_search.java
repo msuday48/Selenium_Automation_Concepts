@@ -63,7 +63,8 @@ public class Google_search {
             }
         } catch (Exception e) {
             e.printStackTrace();
-        } finally {
+        }
+        finally {
         }
     }
 }

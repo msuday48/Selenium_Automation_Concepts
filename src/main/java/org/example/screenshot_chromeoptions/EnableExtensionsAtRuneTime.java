@@ -15,8 +15,7 @@ public static void main(String[] args) {
 		File file=new File("C:\\Automation\\automationFiles\\crx files\\SelectorsHub.crx");
 		
 		options.addExtensions(file);
-	
-	
+
 		WebDriver driver=new ChromeDriver(options);
 		
 		driver.get("https://text-compare.com/");

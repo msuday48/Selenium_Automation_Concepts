@@ -9,7 +9,6 @@ import java.io.IOException;
 //Excel File--->Workbook--->Sheets--->Rows----Cells
 
 public class ReadingDataFromExcel {
-
     public static void main(String[] args) throws IOException {
 
         FileInputStream file=new FileInputStream(System.getProperty("user.dir")+"\\testdata\\data.xlsx");
@@ -39,9 +38,3 @@ public class ReadingDataFromExcel {
         file.close();
     }
 }
-
-
-
-
-
-

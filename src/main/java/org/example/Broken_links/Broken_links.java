@@ -13,6 +13,7 @@ import java.util.List;
 public class Broken_links {
 
 public static void main (String[]args){
+
     WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("http://www.deadlinkcity.com/");
@@ -23,7 +24,6 @@ public static void main (String[]args){
 		System.out.println("Total number of links:"+ links.size());
 
     int noOfBrokenLinks=0;
-
 
 		for(WebElement linkElement:links)
     {
