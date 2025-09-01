@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Calender_Dates {
 
-
     // -------------------------------
     // Method to select a FUTURE DATE from DatePicker
     // -------------------------------
