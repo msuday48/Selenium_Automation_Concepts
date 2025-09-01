@@ -158,7 +158,7 @@ public class interviewQuestions {
             return new Object[][] {
                     {"student", "pass123"},
                     {"admin", "admin123"}
-            };
+            }
         }
 
         @Test(dataProvider = "data")

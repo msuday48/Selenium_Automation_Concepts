@@ -7,12 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
+public class Browser_Window_Handels {
 
-public class Browser_Window_Handels
-{
-    public static void main(String[]args)
-    {
-        WebDriver driver=new ChromeDriver();
+    public static void main(String[] args) {
+
+        WebDriver driver = new ChromeDriver();
+
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -20,11 +21,11 @@ public class Browser_Window_Handels
 
         driver.findElement(By.xpath("//a[normalize-space()='OrangeHRM, Inc']")).click();
 
-        Set<String> windowid=driver.getWindowHandles();
+        Set <String> windowid = driver.getWindowHandles();
 
         //Aproach1
 
-        List <String> windowlist=new ArrayList<> (windowid);
+        List<String> windowlist = new ArrayList<>(windowid);
       /*
         String childwindow=windowlist.get(0);
         String parentwindow=windowlist.get(1);
@@ -37,11 +38,14 @@ public class Browser_Window_Handels
         driver.switchTo().window(parentwindow);
         System.out.println(driver.getTitle());
 */
-        for(String wind:windowid){
-            String title =driver.switchTo().window(wind).getTitle();
-            if(title.equals("OrangeHRM")){
+        for (String wind : windowid) {
+            String title = driver.switchTo().window(wind).getTitle();
+            if (title.equals("OrangeHRM")) {
                 System.out.println(driver.getCurrentUrl());
             }
         }
+
         driver.quit();
-    }}
+
+    }
+}

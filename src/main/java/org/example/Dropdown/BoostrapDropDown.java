@@ -38,7 +38,7 @@ public class BoostrapDropDown {
         {
             String option=op.getText();
 
-            if(option.equals("Java") || option.equals("Python") || option.equals("MySQL"))
+            if(op.getText().equals("Java") || option.equals("Python") || option.equals("MySQL"))
             {
                 op.click();
             }

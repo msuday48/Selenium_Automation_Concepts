@@ -1,10 +1,10 @@
 package org.example.Broken_links;
 
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
@@ -12,8 +12,8 @@ import java.util.List;
 
 public class Broken_links {
 
-public static void main (String[]args){
-
+public static void main (String[]args)
+{
     WebDriver driver=new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.get("http://www.deadlinkcity.com/");
@@ -35,7 +35,7 @@ public static void main (String[]args){
             continue;
         }
 
-        //hit url to the server
+        //http url to the server
         try
         {
             URL linkURL=new URL(hrefattValue); // converted href value from string to URL format

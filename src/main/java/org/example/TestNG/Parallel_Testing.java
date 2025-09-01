@@ -2,6 +2,7 @@ package org.example.TestNG;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -12,6 +13,7 @@ import org.testng.annotations.*;
 import java.time.Duration;
 
 public class Parallel_Testing {
+
     WebDriver driver;
     @BeforeClass
     @Parameters({"browser"})
@@ -35,6 +37,7 @@ public class Parallel_Testing {
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         Thread.sleep(3000);  // Wait for elements to load
     }
+
 
     @Test(priority = 1)
     void testLogo() {

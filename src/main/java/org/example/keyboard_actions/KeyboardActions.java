@@ -28,7 +28,6 @@ public class KeyboardActions {
 		
 		//CTRL+C   - copy the text into clipboard
 
-
 		act.keyDown(Keys.CONTROL).sendKeys("C").keyUp(Keys.CONTROL).perform();
 
 		//TAB  - shift to 2nd box

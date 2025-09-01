@@ -30,6 +30,7 @@ WebDriver driver=new ChromeDriver();
         dropdown.selectByValue("japan");
         dropdown.deselectByIndex(2);
 dropdown.getAllSelectedOptions();
+
         List <WebElement>  options= dropdown.getOptions();
 
      /*   for(int i=0;i<options.size();i++)

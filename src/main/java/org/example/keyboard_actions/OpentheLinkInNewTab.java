@@ -30,7 +30,6 @@ public class OpentheLinkInNewTab {
 		//switching to registration page
 		List<String> ids=new ArrayList(driver.getWindowHandles());
 
-
 		//Registration
 		driver.switchTo().window(ids.get(1)); // switch to registration page
 		driver.findElement(By.xpath("//input[@id='FirstName']")).sendKeys("John KENEDY");

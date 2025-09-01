@@ -28,11 +28,8 @@ public class RunTestsIncognitoMode {
 		}
 	
 		//driver.quit();
-		
-		
-	}
 
-	
+	}
 }
 
 
