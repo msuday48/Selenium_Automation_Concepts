@@ -1,4 +1,4 @@
-package org.example.Alerts.Date_Picker;
+package org.example.Data_Driven_Testing;
 import java.time.Duration;
 import java.util.List;
 
@@ -106,9 +106,9 @@ public class Calender_Dates {
         driver.findElement(By.xpath("//input[@id='datepicker']")).click(); // Click input -> opens date picker popup
 
         // Desired date to select
-        String year = "2022";
-        String month = "May";
-        String date = "10";
+        String year = "2025";
+        String month = "sep";
+        String date = "01";
 
         // Choose either future date OR pas
 
